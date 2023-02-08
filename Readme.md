@@ -4,7 +4,7 @@
 
 ***Get List of clusters***
 
-```eksctl get cluster```                  
+```eksctl get cluster```
 
 ***Template***
 ```eksctl utils associate-iam-oidc-provider \
@@ -17,6 +17,7 @@
 ```eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster eks-planet9 --approve```
 
 ***Create Public Node Group***   
+
 ```eksctl create nodegroup --cluster=eks-planet9 \
                        --region=us-east-1 \
                        --name=eks-planet9-ng-public1 \
@@ -33,10 +34,6 @@
                        --full-ecr-access \
                        --appmesh-access \
                        --alb-ingress-access ```
-
-eksctl create nodegroup --cluster=eks-planet9 --region=us-east-1 --name=eks-planet9-ng-private1 --node-type=t2.medium --nodes=2 --nodes-min=2 --nodes-max=4 --node-volume-size=20 --ssh-access --ssh-public-key=p9-ec2 --managed --asg-access --external-dns-access --full-ecr-access --appmesh-access --alb-ingress-access --node-private-networking
-eksctl create nodegroup --cluster=eks-planet9 --region=us-east-1 --name=eks-planet9-ng-public1 --node-type=t2.medium --nodes=2 --nodes-min=2 --nodes-max=4 --node-volume-size=20 --ssh-access --ssh-public-key=p9-ec2 --managed --asg-access --external-dns-access --full-ecr-access --appmesh-access --alb-ingress-access
-
 
 ***List EKS clusters***
 
