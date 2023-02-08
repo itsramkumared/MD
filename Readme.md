@@ -7,6 +7,7 @@
 ```eksctl get cluster```
 
 ***Template***
+
 ```eksctl utils associate-iam-oidc-provider \
     --region region-code \
     --cluster <cluter-name> \
@@ -72,4 +73,4 @@ eksctl delete cluster eks-planet9
 
 aws eks --region us-east-1 update-kubeconfig --name eks-planet9
 
--[For Deployments](https://github.com/itsramkumared/planet9-kubernetes-deployments)
+[For YAML files](https://github.com/itsramkumared/planet9-kubernetes-deployments)
